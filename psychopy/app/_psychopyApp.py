@@ -351,7 +351,7 @@ class PsychoPyApp(wx.App, handlers.ThemeMixin):
 
         # ----
 
-        if showSplash:
+        if showSplash and not sys.platform.startswith('linux'):
             # show splash screen
             splashFile = os.path.join(
                 self.prefs.paths['resources'], 'psychopySplash.png')
